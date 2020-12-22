@@ -1,0 +1,33 @@
+<div class="jumbotron bg-primary">
+    <h1 class="display-4">Bem vindo ao Blog do nodeJS</h1>
+    <p class="lead"> Este Blog tem intenção de demostrar o poder do nodeJS</p>
+    <hr class="my-4">
+    <p class="lead"></p>
+    <a href="http://" class="btn btn-primary btn-lg bg-info" role="button">Crie uma conta</a>
+
+</div>
+
+<hr>
+
+<h2>Postagens Recentes:</h2>
+
+{{#each postagem}}
+<div class="card mt-4">
+    <div class="card-body ">
+        <hr>
+             <h3>{{titulo}}</h3>
+             <p> {{descricao}}</p>
+        <small> Categoria:
+            {{categoria.nome}}
+            </small>
+
+
+        <br>
+         <a href="/postagem/{{slug}}"><button class="btn btn-success mt-3">Leia mais</button></a>
+       
+    </div>
+</div>
+
+{{else}}
+<h5>Nenhuma Postagem</h5>
+{{/each}}
